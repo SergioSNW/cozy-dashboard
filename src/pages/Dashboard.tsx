@@ -6,6 +6,7 @@ import { Sidebar } from '../components/Sidebar';
 import Footer from '../components/Footer';
 import { Widget } from '../components/widgets/Widget';
 import { TimerWidget } from '../components/widgets/TimerWidget';
+import { WeatherWidget } from '../components/widgets/WeatherWidget';
 
 export default function Dashboard() {
   const user = {
@@ -34,8 +35,16 @@ export default function Dashboard() {
           >
             + Create Widget
           </button>
-          <Widget id="1" title="Timer">
+          <Widget id="1" title="Timer" onRemove={() => alert('should delete!')}>
             <TimerWidget />
+          </Widget>
+
+          <Widget
+            id="2"
+            title="Weather"
+            onRemove={() => alert('should delete!')}
+          >
+            <WeatherWidget />
           </Widget>
         </MainBody>
       </div>
