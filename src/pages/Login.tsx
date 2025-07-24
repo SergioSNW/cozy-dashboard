@@ -11,20 +11,25 @@ export default function Login() {
   };
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100">
+    <div className="flex min-h-screen flex-col items-center justify-center">
+      <div className="p-4">
+        <h1 className="text-xl" style={{}}>
+          My Cozy Dashboard
+        </h1>
+      </div>
       <form onSubmit={handleSubmit} className="bg-white p-8 rounded shadow">
         <h2 className="mb-4 text-xl font-bold">Login</h2>
         <input
           type="email"
           placeholder="Email"
-          className="mb-2 block w-full p-2 border rounded"
+          className="mb-2 block w-full p-2 border rounded bg-gray-200"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
           type="password"
           placeholder="Password"
-          className="mb-4 block w-full p-2 border rounded"
+          className="mb-4 block w-full p-2 border rounded bg-gray-200"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
