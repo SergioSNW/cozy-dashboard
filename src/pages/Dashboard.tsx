@@ -4,6 +4,8 @@ import { Header } from '../components/Header';
 import { MainBody } from '../components/MainBody';
 import { Sidebar } from '../components/Sidebar';
 import Footer from '../components/Footer';
+import { Widget } from '../components/widgets/Widget';
+import { TimerWidget } from '../components/widgets/TimerWidget';
 
 export default function Dashboard() {
   const user = {
@@ -32,6 +34,9 @@ export default function Dashboard() {
           >
             + Create Widget
           </button>
+          <Widget id="1" title="Timer">
+            <TimerWidget />
+          </Widget>
         </MainBody>
       </div>
       <Footer />
