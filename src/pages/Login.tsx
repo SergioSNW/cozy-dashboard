@@ -1,13 +1,16 @@
 // src/pages/Login.tsx
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Add authentication logic here
+    navigate('/dashboard');
   };
 
   return (
@@ -18,18 +21,18 @@ export default function Login() {
         </h1>
       </div>
       <form onSubmit={handleSubmit} className="bg-white p-8 rounded shadow">
-        <h2 className="mb-4 text-xl font-bold">Login</h2>
+        <h2 className="mb-4 text-xl font-bold text-black">Login</h2>
         <input
           type="email"
           placeholder="Email"
-          className="mb-2 block w-full p-2 border rounded bg-gray-200"
+          className="mb-2 block w-full p-2 border rounded bg-gray-200 text-black"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
           type="password"
           placeholder="Password"
-          className="mb-4 block w-full p-2 border rounded bg-gray-200"
+          className="mb-4 block w-full p-2 border rounded bg-gray-200 text-black"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />

@@ -12,6 +12,7 @@
     "tailwind:init": "tailwindcss init -p"
   },
   "dependencies": {
+    "daisyui": "^5.0.46",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.7.0"
